@@ -1,0 +1,39 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head><title>Streamers</title></head>
+<body>
+
+
+
+<div>
+<img src="http://twitchdev.wpengine.com/wp-content/uploads/2013/06/Glitch_icon.png" th:src="${streamer.logo}" />
+<span class="streamerTitle" th:text="${streamer.username}">Streamer</span>
+Bio: <span>Lorem Ipsum</span>
+</div>
+<table>
+<thead>
+<tr>
+<th>Game Name</th><th th:each="stat: ${statlist}" th:text="${stat}">Stat</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="game: ${streamer.games}">
+<td th:text="${game.gameName}">Game Name
+</td>
+<td th:each="stat: ${game.stats}" th:text="${stat.count}">Stat Count</td>
+
+</tr>
+
+
+</tbody>
+</table>
+
+
+
+
+</body>
+
+
+</html>

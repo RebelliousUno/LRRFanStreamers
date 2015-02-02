@@ -1,0 +1,72 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+
+<title>SnorshTV</title>
+<meta name="description" content="LoadingReadyRun Fanstream Calendar" />
+<meta name="author" content="SitePoint" />
+
+
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../resources/css/styles.css?v=1.0"
+	th:href="@{/resources/css/styles.css?v=1.0}" />
+
+
+</head>
+
+<body
+	th:style="'background-image: url(' + @{/resources/img/bg_grad.png} + ');'"
+	style="background-image: url('../../resources/img/bg_grad.png');">
+	<div id="top">
+		<img th:src="@{/resources/img/logo_top.png}"
+			src="../../resources/img/logo_top.png" class="logo" />
+		<ul class="menu">
+			<li><a href="#">Browse Shows</a></li>
+			<li><a href="#">Join the Fanstream!</a></li>
+			<li>|</li>
+			<li><a href="http://loadingreadyrun.com/live"><span
+					class="button">Official LoadingReadyLive Stream Calendar</span></a></li>
+		</ul>
+	</div>
+
+	<div id="wrapper">
+
+		<div id="sidebar">
+			<h1>Streamers</h1>
+			<div th:each="streamer: ${streamers}" class="streamer"
+				th:class="${streamer.live}?'streamer live':'streamer'">
+				<a href="#" th:href="${streamer.username}"><img
+					th:src="${streamer.logo}" class="logo"
+					src="http://twitchdev.wpengine.com/wp-content/uploads/2013/06/Glitch_icon.png" />
+					<br />
+				<span th:text="${streamer.username}">Username</span></a>
+			</div>
+		</div>
+		<div id="main">
+			<div id="grad">
+				<img th:src="@{/resources/img/logo.png}"
+					src="../../resources/img/logo.png" class="center_content"
+					style="padding-top: 2em; padding-bottom: 2em" />
+			</div>
+
+
+			<div id="main_content" style="position: relative; margin-top: 2em">
+				<iframe th:src="${calLink}"
+					src="https://www.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=caffeinatedlemur%40gmail.com&amp;color=%23AB8B00"
+					frameborder="0" scrolling="no" height="600" width="1024"></iframe>
+				<!--
+				<div class="stream_text">
+				<img src="img/DBFS_logo_s.png" style="padding:0;float:left"><span class="stream_text_head">DESERTBUS_SNORSH<br>Playing <a href=http://www.twitch.tv/directory/game/Penn%20And%20Teller%27s%20Smoke%20And%20Mirrors>Penn And Teller's Smoke And Mirrors</a></span>
+				<h1 style="color:#fff;">Desert Bus For Snorsh</h1>
+				<p>Heeeeeey everybody do you like deserts? Of course you don’t. No one does. But we are here in the desert driving a bus to raise money for charity!
+<br><br>* The charity is Snorsh. We need the money to feed David Caruso and to pay off the weagle mafia*.<br><br><br>**Don’t ask.</p>
+				<p><a href=http://www.twitch.tv/desertbus>Click here</a> to watch and chat!</p>
+				-->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

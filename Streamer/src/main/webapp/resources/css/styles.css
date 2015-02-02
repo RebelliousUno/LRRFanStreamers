@@ -1,0 +1,145 @@
+body {
+	padding: 0; margin: 0;
+	background-color: #567cdf;
+	background-repeat: repeat-x;
+	font-family: Calibri;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} 
+
+li {
+    display: inline;
+	margin-right: 1em;
+	font-weight: bold;
+	color: #32a6ff;
+}
+	li a {
+		font-size:1em;
+
+	}
+
+a {
+	color: #32a6ff;
+	text-decoration: none;
+}
+
+hr {
+	background-color: #32a6ff;
+    padding: 0px;
+    margin: 0px;
+}
+
+#top {
+	background-color: #fff;
+	border-bottom: 10px #32a6ff solid;
+}
+
+#wrapper {
+}
+
+#grad {
+	min-height: 100px;
+}
+
+#sidebar {
+	width: 15%;
+	background-color: #2e2e2e;
+	float:left;
+	color: #32a6ff;
+	height: 100vh;
+	text-align: center;
+	overflow-y: auto;
+}
+
+#sidebar:after {
+	content: "";
+	dispay: block;
+	clear: both;
+}
+
+#main {
+	width:85%;
+	margin-left: 15%;
+	--float: left;
+}
+
+#bar {
+	float:left;
+	}
+	
+.menu {
+	float: right;
+	padding-top: 1.25em;
+	padding-right: 15%;
+}
+
+#main_content {
+	border: 10px #32a6ff solid;
+	width: 1024px;
+	margin: 0 auto;	
+}
+
+.stream_text {
+	max-width: 350px;
+	padding: 1.5em;
+	float: right;
+	color: #afafaf;
+	font-size:0.85em;
+}
+.stream_text_head {
+	max-width: 350px;
+	padding: 1em;
+	float: left;
+	color: #afafaf;
+	font-size:0.85em;
+	vertical-align:center;
+}
+
+
+#top .logo {
+	padding-left: 15%;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.center_content {
+	margin: auto;
+	display: block;
+	--position: absolute;
+	--left: 15%; right: 0;
+}
+
+.button {
+	background-color: #32a6ff;
+	color: #ffffff;
+	padding: .45em;
+}
+
+|.streamer_logo {
+
+}
+
+
+.live:after {
+	display: block;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 4em;
+	border: 1px solid red;
+	content: "LIVE";
+	background-color: rgba(0,0,0,0.5);
+	color: white;
+	padding-bottom: 2px;
+}
+
+.streamer {
+	display: block;
+	margin: auto;
+	position: relative;
+	width: 150px;
+}
