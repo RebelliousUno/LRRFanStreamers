@@ -91,8 +91,10 @@ public class StreamerDAO {
 	public List<String> getStatlistForStreamer(String streamer) {
 		Streamer st = getStreamerByUserName(streamer, FetchType.EAGER);
 		List<String> statlist = new ArrayList<String>();
-		for (Stat s : st.getGames().get(0).getStats()) {
-			statlist.add(s.getStatName());
+		if (st.getGames().size() > 0) {
+			for (Stat s : st.getGames().get(0).getStats()) {
+				statlist.add(s.getStatName());
+			}
 		}
 		return statlist;
 	}
