@@ -9,7 +9,7 @@ import org.apache.http.util.EntityUtils;
 
 import com.google.api.client.http.HttpResponse;
 import com.google.gson.Gson;
-import com.uno.streams.beans.GeoIPJSON;
+import com.uno.streamers.beans.GeoIPJSON;
 
 public class GeoIPDAO {
 

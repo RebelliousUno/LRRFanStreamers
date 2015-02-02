@@ -1,4 +1,4 @@
-package com.uno.streams.beans;
+package com.uno.streamers.beans;
 
 public class GeoIPJSON {
 

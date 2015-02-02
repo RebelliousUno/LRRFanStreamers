@@ -30,9 +30,9 @@ import com.uno.streamers.DAO.GoogleCalendarDAO;
 import com.uno.streamers.DAO.LegBotDAO;
 import com.uno.streamers.DAO.StreamerDAO;
 import com.uno.streamers.DAO.TwitchAPIDAO;
-import com.uno.streams.beans.Game;
-import com.uno.streams.beans.Stat;
-import com.uno.streams.beans.Streamer;
+import com.uno.streamers.beans.Game;
+import com.uno.streamers.beans.Stat;
+import com.uno.streamers.beans.Streamer;
 
 @Configuration
 @ComponentScan("com.uno.streamers")

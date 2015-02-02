@@ -1,4 +1,4 @@
-package com.uno.streams.beans;
+package com.uno.streamers.beans;
 
 import java.util.ArrayList;
 import java.util.List;

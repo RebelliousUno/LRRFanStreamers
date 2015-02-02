@@ -14,7 +14,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
 import com.google.gson.Gson;
-import com.uno.streams.beans.Stat;
+import com.uno.streamers.beans.Stat;
 
 public class LegBotDAO {
 

@@ -16,9 +16,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.annotations.Parent;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.uno.streams.beans.Game;
-import com.uno.streams.beans.Stat;
-import com.uno.streams.beans.Streamer;
+import com.uno.streamers.beans.Game;
+import com.uno.streamers.beans.Stat;
+import com.uno.streamers.beans.Streamer;
 
 public class StreamerDAO {
 

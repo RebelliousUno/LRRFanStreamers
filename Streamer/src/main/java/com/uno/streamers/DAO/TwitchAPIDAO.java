@@ -13,7 +13,7 @@ import org.apache.http.util.EntityUtils;
 
 import com.google.gson.Gson;
 import com.uno.streamers.DAO.json.TwitchUser;
-import com.uno.streams.beans.Streamer;
+import com.uno.streamers.beans.Streamer;
 
 public class TwitchAPIDAO {
 
