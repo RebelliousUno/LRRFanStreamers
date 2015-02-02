@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.uno.streamers.DAO.json.TwitchUser;
 import com.uno.streamers.beans.Game;
 import com.uno.streamers.beans.Stat;
 import com.uno.streamers.beans.Streamer;
@@ -37,7 +38,7 @@ public class DBUpdaterTask {
 	private void updateStreamers(ArrayList<String> usernames) {
 		for (String user : usernames) {
 			updateStreamer(user);
-			updateStreamer2(user);
+			//updateStreamer2(user);
 		}
 	}
 
@@ -73,9 +74,17 @@ public class DBUpdaterTask {
 			sesh.saveOrUpdate(st);
 		} else {
 			// Streamer doesn't exist so new streamer
+			TwitchUser tu = twitchDAO.getTwitchUser(user);
 			Streamer s = new Streamer();
 			s.setUsername(user);
-			s.setLogo(twitchDAO.getLogoByUsername(user));
+			if (null!=tu) {
+				s.setBio(tu.getBio());
+				s.setLogo(tu.getLogo());				
+			} else {
+				s.setBio("Lorem Ipsum");
+				s.setLogo("http://twitchdev.wpengine.com/wp-content/uploads/2013/06/Glitch_icon.png");
+			}
+			
 			sesh.saveOrUpdate(s);
 		}
 		sesh.close();

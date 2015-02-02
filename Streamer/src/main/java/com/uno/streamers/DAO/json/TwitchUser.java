@@ -56,8 +56,11 @@ public class TwitchUser {
 		this.updated_at = updated_at;
 	}
 	public String getLogo() {
-
-		return logo.replaceAll("300x300", "150x150");
+		if (null!=logo) {
+			return logo.replaceAll("300x300", "150x150");
+		} else {
+			return "http://twitchdev.wpengine.com/wp-content/uploads/2013/06/Glitch_icon.png";
+		}
 	}
 	public void setLogo(String logo) {
 		this.logo = logo;

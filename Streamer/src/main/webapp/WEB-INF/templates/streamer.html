@@ -10,7 +10,7 @@
 <div>
 <img src="http://twitchdev.wpengine.com/wp-content/uploads/2013/06/Glitch_icon.png" th:src="${streamer.logo}" />
 <span class="streamerTitle" th:text="${streamer.username}">Streamer</span>
-Bio: <span>Lorem Ipsum</span>
+Bio: <span th:text="${streamer.bio}">Lorem Ipsum</span>
 </div>
 <table>
 <thead>

@@ -17,6 +17,17 @@ import com.uno.streamers.beans.Streamer;
 
 public class TwitchAPIDAO {
 
+	public TwitchUser getTwitchUser(String username) {
+		String json = getJSONFromURL("https://api.twitch.tv/kraken/users/"
+				+ username);
+		
+		TwitchUser g = null;
+		Gson gson = new Gson();
+		g = gson.fromJson(json, TwitchUser.class);
+		return g;
+	}
+	
+	
 	public String getLogoByUsername(String username) {
 		
 		

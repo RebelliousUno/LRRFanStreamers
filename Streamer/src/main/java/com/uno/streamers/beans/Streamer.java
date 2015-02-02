@@ -30,6 +30,9 @@ public class Streamer implements Comparable<Streamer>{
 	@Column(name="live")
 	private boolean live;
 	
+	@Column(name="bio", length=10000)
+	private String bio;
+	
 	@Column(name="username", unique=true, nullable=false)
 	private String username;
 	
@@ -107,6 +110,12 @@ public class Streamer implements Comparable<Streamer>{
 	public boolean equals(Streamer s){
 		return getUsername().equals(s.getUsername());
 		
+	}
+	public String getBio() {
+		return bio;
+	}
+	public void setBio(String bio) {
+		this.bio = bio;
 	}
 	
 	

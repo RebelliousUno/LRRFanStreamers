@@ -1,7 +1,7 @@
 package com.uno.streamers;
 
-import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 
 import javax.persistence.FetchType;
 import javax.servlet.http.HttpServletRequest;
@@ -50,8 +50,9 @@ public class HomeController {
 		String timeZone = geoIP.getTimezoneFromIP(IP);
 		String calLink = "https://www.google.com/calendar/embed?mode=WEEK&height=600&wkst=2&bgcolor=%23FFFFFF&src=caffeinatedlemur%40gmail.com&color=%23AB8B00&ctz="+timeZone;
 		model.addAttribute("calLink", calLink);
-		
-		
+		Random r = new Random();
+		String logoLink = String.format("logo_top_%02d.png",r.nextInt(12)+1);
+		model.addAttribute("logoLink",logoLink);
 		return "index";
 	}
 
